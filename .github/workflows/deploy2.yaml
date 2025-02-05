@@ -1,0 +1,17 @@
+name: simple workflow2
+on:
+  workflow_run:
+         workflows: [simple workflow]
+         types:
+          - completed
+
+jobs:
+    Deploment:
+        runs-on: ubuntu-latest
+        steps:
+          - name: checkout code
+            uses: actions/checkout@v4
+            
+
+
+        
